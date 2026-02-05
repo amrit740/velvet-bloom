@@ -29,8 +29,43 @@ const PhotoSection = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         className="relative z-10"
       >
+        {/* Pulsing glow ring */}
+        <motion.div
+          className="absolute -inset-4 rounded-[2rem] blur-xl"
+          style={{ 
+            background: 'linear-gradient(135deg, hsl(340 65% 50% / 0.5), hsl(290 55% 45% / 0.4), hsl(320 60% 48% / 0.45))'
+          }}
+          animate={{
+            opacity: [0.4, 0.7, 0.4],
+            scale: [1, 1.05, 1],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        {/* Secondary outer glow */}
+        <motion.div
+          className="absolute -inset-8 rounded-[2.5rem] blur-2xl"
+          style={{ 
+            background: 'radial-gradient(circle, hsl(340 60% 45% / 0.3), hsl(290 50% 40% / 0.2), transparent)'
+          }}
+          animate={{
+            opacity: [0.3, 0.5, 0.3],
+            scale: [1, 1.08, 1],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.5
+          }}
+        />
+        
         {/* Frosted glass card */}
-        <div className="glass-card rounded-3xl p-4 md:p-6 photo-glow max-w-sm mx-auto">
+        <div className="glass-card rounded-3xl p-4 md:p-6 photo-glow max-w-sm mx-auto relative">
           <div className="relative overflow-hidden rounded-2xl">
             <motion.img
               src={photo}
