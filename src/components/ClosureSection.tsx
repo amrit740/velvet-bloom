@@ -8,8 +8,9 @@ const ClosureSection = () => {
 
   return (
     <section ref={ref} className="section-mobile relative pb-24">
-      {/* Subtle bottom glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-wine/15 blur-[80px] rounded-full" />
+      {/* Colorful bottom glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] blur-[80px] rounded-full" 
+           style={{ background: 'linear-gradient(90deg, hsl(290 50% 40% / 0.3), hsl(340 55% 45% / 0.35), hsl(320 50% 38% / 0.3))' }} />
       
       <motion.p
         initial={{ opacity: 0, y: 20 }}

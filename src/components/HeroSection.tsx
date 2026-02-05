@@ -8,15 +8,32 @@ const HeroSection = () => {
       
       {/* Animated ambient glow */}
       <motion.div 
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-rose-glow/10 blur-[120px]"
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full blur-[120px]"
+        style={{ background: 'radial-gradient(circle, hsl(340 65% 45% / 0.4), hsl(290 55% 35% / 0.2), transparent)' }}
         animate={{ 
           scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3]
+          opacity: [0.5, 0.7, 0.5]
         }}
         transition={{ 
           duration: 8,
           repeat: Infinity,
           ease: "easeInOut"
+        }}
+      />
+      
+      {/* Secondary color glow */}
+      <motion.div 
+        className="absolute bottom-1/4 right-0 w-[400px] h-[400px] rounded-full blur-[100px]"
+        style={{ background: 'radial-gradient(circle, hsl(290 60% 40% / 0.35), transparent)' }}
+        animate={{ 
+          scale: [1, 1.15, 1],
+          opacity: [0.4, 0.6, 0.4]
+        }}
+        transition={{ 
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 2
         }}
       />
       

@@ -10,10 +10,11 @@ const InteractionSection = () => {
     <section ref={ref} className="section-mobile relative">
       {/* Center glow */}
       <motion.div 
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-rose-glow/15 blur-[100px]"
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] rounded-full blur-[100px]"
+        style={{ background: 'radial-gradient(circle, hsl(340 65% 50% / 0.4), hsl(290 55% 45% / 0.25), transparent)' }}
         animate={{ 
-          scale: [1, 1.1, 1],
-          opacity: [0.3, 0.5, 0.3]
+          scale: [1, 1.15, 1],
+          opacity: [0.5, 0.7, 0.5]
         }}
         transition={{ 
           duration: 5,

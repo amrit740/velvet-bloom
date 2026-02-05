@@ -14,8 +14,11 @@ const ExpressionSection = () => {
 
   return (
     <section ref={ref} className="section-mobile relative">
-      {/* Left ambient glow */}
-      <div className="absolute left-0 top-1/3 w-[250px] h-[350px] bg-plum/25 blur-[90px] rounded-full" />
+      {/* Colorful ambient glows */}
+      <div className="absolute left-0 top-1/4 w-[280px] h-[350px] blur-[90px] rounded-full" 
+           style={{ background: 'radial-gradient(circle, hsl(290 55% 42% / 0.4), transparent)' }} />
+      <div className="absolute right-0 bottom-1/4 w-[220px] h-[280px] blur-[80px] rounded-full" 
+           style={{ background: 'radial-gradient(circle, hsl(340 60% 48% / 0.35), transparent)' }} />
       
       <div className="relative z-10 text-center max-w-md px-4">
         {lines.map((line, index) => (
