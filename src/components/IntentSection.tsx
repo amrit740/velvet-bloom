@@ -14,8 +14,11 @@ const IntentSection = () => {
 
   return (
     <section ref={ref} className="section-mobile relative">
-      {/* Subtle side glow */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[300px] h-[400px] bg-wine/20 blur-[100px] rounded-full" />
+      {/* Colorful side glows */}
+      <div className="absolute right-0 top-1/3 w-[300px] h-[400px] blur-[100px] rounded-full" 
+           style={{ background: 'radial-gradient(circle, hsl(340 60% 45% / 0.35), transparent)' }} />
+      <div className="absolute left-0 bottom-1/3 w-[250px] h-[300px] blur-[80px] rounded-full" 
+           style={{ background: 'radial-gradient(circle, hsl(280 55% 40% / 0.3), transparent)' }} />
       
       <div className="relative z-10 text-center max-w-md">
         {lines.map((line, index) => (

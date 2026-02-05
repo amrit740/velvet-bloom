@@ -11,9 +11,10 @@ const PhotoSection = () => {
     <section ref={ref} className="section-mobile relative py-20">
       {/* Ambient glow behind card */}
       <motion.div 
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[450px] rounded-3xl bg-rose-glow/15 blur-[80px]"
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[450px] rounded-3xl blur-[80px]"
+        style={{ background: 'linear-gradient(135deg, hsl(340 65% 45% / 0.4), hsl(290 55% 40% / 0.3), hsl(320 60% 42% / 0.35))' }}
         animate={{ 
-          opacity: [0.4, 0.6, 0.4],
+          opacity: [0.5, 0.7, 0.5],
         }}
         transition={{ 
           duration: 6,
